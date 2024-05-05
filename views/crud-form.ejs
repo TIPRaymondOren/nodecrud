@@ -6,26 +6,64 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <style type="text/css">
     .crud-form {
-      height: 100vh;
+      height: auto;
       border: 2px solid #f1f1f1;
       padding: 16px;
-      background-color: white;
-      width: 30%;
+      background-color: var(--form-bg-color);
+      width: inherit;
+      border-radius: 0px 0px 20px 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      width: 40vw;
     }
 
     input {
-      width: 100%;
       padding: 15px;
       margin: 5px 0 22px 0;
-      display: inline-block;
       border: none;
-      background: #f1f1f1;
+      background-color: var(--input-bg-color);
+      color: var(--text-color);
+      border-radius: 10px;
+      font-size: 18px;
     }
 
     input[type=text]:focus,
-    input[type=password]:focus {
-      background-color: #ddd;
+    input[type=email]:focus,
+    input[type=city]:focus {
+      background-color: var(--input-focus-bg-color);
       outline: none;
+    }
+
+    button[type=submit] {
+      background-color: var(--button-bg-color);
+      color: var(--button-text-color);
+      padding: 15px;
+      border-style: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--placeholder-text-color);
+      opacity: 1;
+      /* Firefox */
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: var(--placeholder-text-color);
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: var(--placeholder-text-color);
     }
   </style>
 </head>
@@ -33,6 +71,14 @@
 <body>
   <!--====form section start====-->
   <div class="card">
+    <div class="title-bar">
+      <div class="title-container">
+        Express JS CRUD
+      </div>
+      <div class="create-container">
+        <a href="/crud/read" id="create-btn">View Table</a>
+      </div>
+    </div>
     <div class="crud-form">
       <form action="<%=(typeof editData!='undefined')?'/crud/update/'+editData.id:'/crud/create'%>" method="POST">
         <input type="text" placeholder="Full Name" name="full_name" required

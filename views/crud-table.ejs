@@ -7,70 +7,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <style>
+    .test {
+      background-color: rgb(239, 156, 48);
+    }
+
     table,
     td,
     th {
-      border: 1px solid #ddd;
+      /* border: 1px solid #ddd; */
+      border-bottom: 1px solid;
       text-align: left;
     }
 
     table {
       border-collapse: collapse;
-      width: 50%;
+      width: 70vw;
+      background-color: var(--table-color);
     }
 
-    .table-data {
-      overflow-x: auto;
+    th {
+      text-align: center;
+      background-color: var(--table-header-color);
     }
 
     th,
     td {
       padding: 15px;
     }
+
+    .table-data {
+      border-radius: 0px 0px 20px 20px;
+      overflow: hidden;
+    }
   </style>
 </head>
 
 <body>
-  <a href="/crud/form/" id="create">Create</a>
-  <div class="table-data">
-    <table>
-      <tr>
-        <th>S.N</th>
-        <th>Full Name</th>
-        <th>Email Address</th>
-        <th>City</th>
-        <th>Country</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-
-      <% if(fetchData.length!=0){ var i=1; fetchData.forEach(function(data){ %>
+  <div class="card">
+    <div class="title-bar">
+      <div class="title-container">
+        Express JS CRUD
+      </div>
+      <div class="create-container">
+        <a href="/crud/form/" id="create-btn">Create</a>
+      </div>
+    </div>
+    <div class="table-data">
+      <table>
         <tr>
-          <td>
-            <%=i; %>
-          </td>
-          <td>
-            <%=data.full_name %>
-          </td>
-          <td>
-            <%=data.email_address %>
-          </td>
-          <td>
-            <%=data.city %>
-          </td>
-          <td>
-            <%=data.country %>
-          </td>
-          <td><a href="/crud/edit/<%=data.id%>" id="edit">Edit</a></td>
-          <td><a href="/crud/delete/<%=data.id%>" id="delete">Delete</a></td>
+          <th>S.N</th>
+          <th>Full Name</th>
+          <th>Email Address</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
-        <% i++; }) %>
-          <% } else{ %>
-            <tr>
-              <td colspan="7">No Data Found</td>
-            </tr>
-            <% } %>
-    </table>
+
+        <% if(fetchData.length!=0){ var i=1; fetchData.forEach(function(data){ %>
+          <tr>
+            <td>
+              <%=i; %>
+            </td>
+            <td>
+              <%=data.full_name %>
+            </td>
+            <td>
+              <%=data.email_address %>
+            </td>
+            <td>
+              <%=data.city %>
+            </td>
+            <td>
+              <%=data.country %>
+            </td>
+            <td><a href="/crud/edit/<%=data.id%>" id="edit-btn">Edit</a></td>
+            <td><a href="/crud/delete/<%=data.id%>" id="delete-btn">Delete</a></td>
+          </tr>
+          <% i++; }) %>
+            <% } else{ %>
+              <tr>
+                <td colspan="7">No Data Found</td>
+              </tr>
+              <% } %>
+      </table>
+    </div>
   </div>
 </body>
 

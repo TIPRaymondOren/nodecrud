@@ -12,12 +12,17 @@
   --table-header-color: #26694b;
   --table-color: #397367;
   --card-bg-color: #2D3A43;
+  --form-bg-color: #63CCCA;
+  --input-bg-color: #1e474b;
+  --input-focus-bg-color: #128592;
+  --placeholder-text-color: #a0a0a0;
+  --button-bg-color: #397367;
 }
 
 body {
   padding: 2%;
   font-size: 18px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--body-background);
   display: flex;
   justify-content: center;
@@ -40,6 +45,37 @@ a:visited {
 .card {
   border: 1px solid var(--border-color);
   padding: 4vh 3vw;
+  box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  background-color: var(--card-bg-color);
+}
+
+.title-bar {
+  width: inherit;
+  height: 6vh;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+  background-color: var(--title-bar-color);
+  padding: 1vh 1vw;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.title-container {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 30px;
+}
+
+.create-container {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 #edit-btn {
