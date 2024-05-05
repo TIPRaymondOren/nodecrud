@@ -1,5 +1,5 @@
 var express = require('express');
-var updateController=require('../controllers/update-controller');
+var updateController = require('../controllers/update-controller');
 var router = express.Router();
 // to edit data 
 router.get('/edit/:id', updateController.editData);

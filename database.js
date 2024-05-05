@@ -1,11 +1,11 @@
 var mysql = require('mysql');
 var conn = mysql.createConnection({
-  host: 'localhost', 
-  user: 'root',      
-  password: '',     
+  host: 'localhost',
+  user: 'root',
+  password: '',
   database: 'nodeapp'
-}); 
-conn.connect(function(err) {
+});
+conn.connect(function (err) {
   if (err) throw err;
   console.log('Database is connected successfully !');
 });
