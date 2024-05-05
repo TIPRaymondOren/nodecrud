@@ -1,8 +1,67 @@
+:root {
+  --edit-anchor-color: #0876b6;
+  --create-anchor-color: #1f929f;
+  --delete-anchor-color: #a8347d;
+  --edit-anchor-hover-color: #3c15a7;
+  --create-anchor-hover-color: #431ff5;
+  --delete-anchor-hover-color: #ed4949;
+  --body-background: #26292B;
+  --text-color: #FFFFFF;
+  --border-color: #D7DEDB;
+  --title-bar-color: #0f1921;
+  --table-header-color: #26694b;
+  --table-color: #397367;
+  --card-bg-color: #2D3A43;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 2%;
+  font-size: 18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--body-background);
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
 }
 
 a {
-  color: #04f32c;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 7px 11px;
+  font-weight: bold;
+  /* border: 2px solid; */
+  border-radius: 10px;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  padding: 4vh 3vw;
+}
+
+#edit-btn {
+  background-color: var(--edit-anchor-color);
+}
+
+#edit-btn:hover {
+  background-color: var(--edit-anchor-hover-color);
+}
+
+#delete-btn {
+  background-color: var(--delete-anchor-color);
+}
+
+#delete-btn:hover {
+  background-color: var(--delete-anchor-hover-color);
+}
+
+#create-btn {
+  background-color: var(--create-anchor-color);
+}
+
+#create-btn:hover {
+  background-color: var(--create-anchor-hover-color);
 }

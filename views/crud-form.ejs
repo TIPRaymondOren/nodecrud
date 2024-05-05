@@ -27,46 +27,29 @@
       background-color: #ddd;
       outline: none;
     }
-
-    button[type=submit] {
-      background-color: #434140;
-      color: #ffffff;
-      padding: 10px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-      font-size: 20px;
-    }
-
-    button[type=submit]:hover {
-      background-color: #3d3c3c;
-    }
   </style>
 </head>
 
 <body>
   <!--====form section start====-->
-  <!--====form section start====-->
-  <div class="crud-form">
-    <form action="<%=(typeof editData!='undefined')?'/crud/update/'+editData.id:'/crud/create'%>" method="POST">
-      <input type="text" placeholder="Full Name" name="full_name" required
-        value="<%=(typeof editData!='undefined')? editData.full_name:''%>">
+  <div class="card">
+    <div class="crud-form">
+      <form action="<%=(typeof editData!='undefined')?'/crud/update/'+editData.id:'/crud/create'%>" method="POST">
+        <input type="text" placeholder="Full Name" name="full_name" required
+          value="<%=(typeof editData!='undefined')? editData.full_name:''%>">
 
-      <input type="email" placeholder="Email Address" name="email_address" required
-        value="<%=(typeof editData!='undefined')? editData.email_address:''%>">
+        <input type="email" placeholder="Email Address" name="email_address" required
+          value="<%=(typeof editData!='undefined')? editData.email_address:''%>">
 
-      <input type="city" placeholder=" City" name="city" required
-        value="<%=(typeof editData!='undefined')? editData.city:''%>">
+        <input type="city" placeholder=" City" name="city" required
+          value="<%=(typeof editData!='undefined')? editData.city:''%>">
 
-      <input type="text" placeholder="Country" name="country" required
-        value="<%=(typeof editData!='undefined')? editData.country:''%>">
-      <button type="submit">Submit</button>
+        <input type="text" placeholder="Country" name="country" required
+          value="<%=(typeof editData!='undefined')? editData.country:''%>">
+        <button type="submit">Submit</button>
+    </div>
   </div>
-  </div>
-  <!--====form section start====-->
-  <!--====form section start====-->
+  <!--====form section end====-->
 
 </body>
 
