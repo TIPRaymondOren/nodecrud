@@ -22,8 +22,9 @@ th, td {
  </style>
 </head>
 <body>
+  <a href="/crud/form/" id="create">Create</a>
     <div class="table-data">
-    <table border="1" >
+    <table>
         <tr>
             <th>S.N</th>
             <th>Full Name</th>
@@ -45,8 +46,8 @@ th, td {
             <td><%=data.email_address %></td>
             <td><%=data.city %></td>
             <td><%=data.country %></td>
-            <td><a href="/crud/edit/<%=data.id%>">Edit</a></td>
-            <td><a href="/crud/delete/<%=data.id%>">Delete</a></td>
+            <td><a href="/crud/edit/<%=data.id%>" id="edit">Edit</a></td>
+            <td><a href="/crud/delete/<%=data.id%>" id="delete">Delete</a></td>
         </tr>
         <%  i++; }) %>
         <% } else{ %>
