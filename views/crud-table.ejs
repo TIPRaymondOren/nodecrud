@@ -39,10 +39,19 @@
       border-radius: 0px 0px 20px 20px;
       overflow: hidden;
     }
+
+    a {
+      margin-left: 10px;
+    }
   </style>
 </head>
 
 <body>
+  <div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div>
   <div class="card">
     <div class="title-bar">
       <div class="title-container">
@@ -50,6 +59,8 @@
       </div>
       <div class="create-container">
         <a href="/crud/form/" id="create-btn">Create</a>
+        <div class="spacer"></div>
+        <a href="/crud/about/" id="about-btn">About</a>
       </div>
     </div>
     <div class="table-data">
@@ -93,6 +104,9 @@
       </table>
     </div>
   </div>
+  <footer>
+    <p>Copyright 2024 Raymond Oren</p>
+  </footer>
 </body>
 
 </html>

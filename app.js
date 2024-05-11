@@ -11,6 +11,7 @@ var createRouter = require('./routes/create-route');
 var readRouter = require('./routes/read-route');
 var updateRouter = require('./routes/update-route');
 var deleteRouter = require('./routes/delete-route');
+var aboutRouter = require('./routes/about-route');
 
 
 
@@ -36,6 +37,7 @@ app.use('/crud', createRouter);
 app.use('/crud', readRouter);
 app.use('/crud', updateRouter);
 app.use('/crud', deleteRouter);
+app.use('/crud', aboutRouter);
 
 
 // catch 404 and forward to error handler
