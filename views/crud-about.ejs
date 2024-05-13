@@ -12,6 +12,7 @@
             display: flex;
             height: 80%;
             background-color: var(--form-bg-color);
+            padding: 1vh 1vw;
         }
 
         .card {
@@ -19,10 +20,14 @@
             width: 50vw;
         }
 
-        p {
-            margin-left: 20px;
+        .description {
             color: #000000 !important;
             text-align: justify;
+            overflow: scroll;
+        }
+
+        p {
+            margin: 20px;
         }
     </style>
 </head>
@@ -37,23 +42,24 @@
     <div class="card">
         <div class="title-bar">
             <div class="title-container">
-                About the Developer and the Application Page
+                About the Application Page
             </div>
             <div class="create-container">
                 <a href="/crud/read" id="create-btn">View Table</a>
             </div>
         </div>
         <div class="content">
-            <img src="/images/about_dev_image.jpg" alt="" srcset="">
-            <p>Hi, I am Raymond Oren, currently a 3rd Year Student of Technological Institute of the Philippines, taking
-                Bachelor of Science in Information Technology.
-                This website is in compliance to my course CITE 007A - Information Assurance and Security 1. This
-                website is
-                a simple information storage web app with an encryption algorithm of Caesar Cipher using ExpressJS. The
-                inserted data in the database is encrypted using Caesar Cipher and is decrypted when requested to be
-                viewed
-                by the user.
-            </p>
+            <img src="/images/caesar_cipher.png" alt="" srcset="">
+            <div class="description">
+                <p>The Caesar cipher is a basic encryption method where each letter in the plaintext is shifted a certain
+                    number of places in the alphabet. Named after Julius Caesar, who purportedly used it, the cipher employs
+                    a simple key representing the shift value. While historically significant, it's highly vulnerable to
+                    brute-force attacks due to its limited number of possible combinations, making it unsuitable for secure
+                    encryption purposes. Caesar's role in its popularization likely stems from his reported use of the
+                    cipher to communicate with his generals during military campaigns, where the chosen shift value would
+                    have been a simple and effective way to conceal messages from potential interceptors.
+                </p>
+            </div>
         </div>
     </div>
     <footer>

@@ -6,7 +6,6 @@ var lastCharacInASCIICode = 126;
 
 module.exports = {
   readData: function (req, res) {
-
     readModel.readData(function (data) {
       // data.full_name = caesarCipherDecrypt(data.full_name);
       data.forEach(row => {
@@ -15,7 +14,6 @@ module.exports = {
         row.city = caesarCipherDecrypt(row.city, shift);
         row.country = caesarCipherDecrypt(row.country, shift);
       });
-
       res.render('crud-table', { fetchData: data });
     });
   }
@@ -36,18 +34,7 @@ function caesarCipherDecrypt(word, shift) {
         decryptFactor += numberOfCharacters;
       }
       decryptedCharCode = (decryptFactor % numberOfCharacters) + firstCharacInASCIICode;
-
-    } 
-    // else if (charCode >= 65 && charCode <= 90) {
-    //   // Filter for UPPERCASE LETTERS
-    //   decryptedCharCode = ((charCode - 65 - shift) % numberOfCharacters) + 65;
-      
-    // } else if (charCode >= 48 && charCode <= 57) {
-    //   // Filter for numbers 0123456789
-    //   decryptedCharCode = ((charCode - 48 - shift) % numberOfCharacters) + 48;
-
-    // } 
-    else {
+    } else {
       // Spaces
       decryptedCharCode = charCode;
     }
